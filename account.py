@@ -18,7 +18,7 @@ class Account:
 		"""
 		return self.__balance
 
-	def deposit(self, amount) -> boolean:
+	def deposit(self, amount) -> bool:
 		"""[Function to increment the account balance]
 				
 		Args:
@@ -33,7 +33,7 @@ class Account:
 			self.__balance += amount
 			return True
 
-	def withdraw(self, amount) -> boolean:
+	def withdraw(self, amount) -> bool:
 		"""[Function to decrement the account balance]
 		
 		Args:
@@ -50,7 +50,7 @@ class Account:
 			self.__balance -= amount
 			return True
 
-	def get_name(self) -> string:
+	def get_name(self) -> str:
 		"""[Function to get account name]
 		
 		Returns:
@@ -58,7 +58,7 @@ class Account:
 		"""
 		return self.__name
 
-	def __str__(self) -> string:
+	def __str__(self) -> str:
 		"""[Function to print]
 		
 		Returns:
@@ -67,7 +67,7 @@ class Account:
 		return f'account_name = {self.__name} and account_balance = {self.__balance}'
 
 
-def main() -> none:
+def main() -> None:
 	account_one = Account('001-John')
 	
 	account_one.deposit(100)
