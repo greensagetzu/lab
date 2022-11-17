@@ -5,10 +5,10 @@ class Account:
 		"""
 		Inits account that set the default values
 
-		:param name: person's name
+		:param account_name: person's name
 		"""
-		self.__name = name
-		self.__balance = 0
+		self.__account_name = name
+		self.__account_balance = 0
 
 	def get_balance(self) -> float:
 		"""
@@ -16,9 +16,9 @@ class Account:
 
 		:return: account balance
 		"""
-		return self.__balance
+		return self.__account_balance
 
-	def deposit(self, amount) -> bool:
+	def deposit(self, amount:float) -> bool:
 		"""
 		Function to increment the account balance
 				
@@ -29,10 +29,10 @@ class Account:
 		if amount < 0 or amount == 0:
 			return False
 		else:
-			self.__balance += amount
+			self.__account_balance += amount
 			return True
 
-	def withdraw(self, amount) -> bool:
+	def withdraw(self, amount:float) -> bool:
 		"""
 		Function to decrement the account balance
 		
@@ -42,10 +42,10 @@ class Account:
 		"""
 		if amount < 0 or amount == 0:
 			return False
-		elif amount > self.__balance:
+		elif amount > self.__account_balance:
 			return False
 		else:
-			self.__balance -= amount
+			self.__account_balance -= amount
 			return True
 
 	def get_name(self) -> str:
@@ -54,7 +54,7 @@ class Account:
 		
 		:return: account name
 		"""
-		return self.__name
+		return self.__account_name
 
 
 
