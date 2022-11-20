@@ -1,13 +1,14 @@
 class Account:
 	
-	def __init__(self, name) -> None:
+	def __init__(self, name: str, balance=0) -> None:
 		"""
-		Inits account that set the default values
+		Constructor to create initial state of an account project
 
-		:param account_name: person's name
+		:param name: person's name
+		:param balance: person's account balance
 		"""
 		self.__account_name = name
-		self.__account_balance = 0
+		self.__account_balance = balance
 
 	def get_balance(self) -> float:
 		"""
